@@ -52,7 +52,7 @@ public class Ihm {
 
     private void showAll() {
         System.out.println("\nListe des tâches :");
-        for (Todo todo : service.getAll()) {
+        for (String todo : service.getAll()) {
             System.out.println(todo);
         }
     }
