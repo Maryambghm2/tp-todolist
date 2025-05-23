@@ -4,12 +4,15 @@ package org.example;
 import org.example.ihm.Ihm;
 import org.example.model.Todo;
 import org.example.service.TodoService;
-import org.example.service.TodoServiceImpl;
+//import org.example.service.TodoServiceImpl;
+import org.example.service.TodoServiceImplCorr2;
+import org.example.service.TodoServiceImplCorrection;
 
 
 public class Main {
     public static void main(String[] args) {
-       TodoService service = new TodoServiceImpl(); // remplacer null par une instanciation d'une classe respectant l'interface TodoService
+       // TodoService service = new TodoServiceImplCorrection(); // remplacer null par une instanciation d'une classe respectant l'interface TodoService
+       TodoService service = new TodoServiceImplCorr2(); // remplacer null par une instanciation d'une classe respectant l'interface TodoService
         Ihm ihm = new Ihm(service);
         ihm.start();
     }

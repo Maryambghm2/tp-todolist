@@ -1,27 +1,24 @@
 package org.example.model;
 
-public class Todo {
-    private int count;
+public class
+Todo {
     private int id;
     private String name;
     private String description;
     private boolean done;
 
-    public Todo(String name, String description) {
-        count = 1;
+    public Todo( int id, String name, String description) {
+
         this.name = name;
         this.done = false;
         this.description = description;
-        this.id = count++;
+        this.id = id;
     }
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public boolean isDone() {
         return done;
@@ -50,14 +47,15 @@ public class Todo {
 
     @Override
     public String toString() {
-        String completion = "";
-        if (done == true) {
-            completion = "(FAIT)";
-        } else {
-            completion = "(A FAIRE)";
-
-        }
-        return "Tache n°" + this.id + "Nom de la tâche : " + this.name + "\n" + ", description " + this.description + completion;
+        String completion = done ? "FAIT" : "A FAIRE";
+//        String completion = "";
+//        if (done == true) {
+//            completion = "(FAIT)";
+//        } else {
+//            completion = "(A FAIRE)";
+//
+//        }
+        return "Tache n°" + this.id + " Nom de la tâche : " + this.name + "\n" + ", description " + this.description + completion;
     }
 
 

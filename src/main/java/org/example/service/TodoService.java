@@ -5,7 +5,7 @@ import org.example.model.Todo;
 import java.util.List;
 
 public interface TodoService {
-    List<String> getAll();
+    List<Todo> getAll();
     Todo getById(int id);
     void add(String name, String description);
     void update(int id, String name, String description, boolean done);
@@ -13,3 +13,4 @@ public interface TodoService {
     void toggleDone(int id);
 
 }
+// TODO Ajouter JDBC
